@@ -31,8 +31,8 @@ public class players {
         boolean check2 = true;
         while (check2) {
         check2 = false;
-        //System.out.println("Enter 1 to edit " + inputPlayer.name + "'s PTS, Enter 2 for RBDS, Enter 3 for AST, Enter 4 for STL, Enter 5 for BLK, Enter 10 to exit  ");
         
+        // gives options of what stat to add to 
         System.out.println("Choose which stat to input:");
         System.out.println("1. Points");
         System.out.println("2. Rebounds");
@@ -41,6 +41,7 @@ public class players {
         System.out.println("5. Blocks");
         System.out.println("10. Exit Stat Editor");
         System.out.print("--> ");
+            
         //program takes user input to figure out what stat the user wants to edit
         Scanner myScanner = new Scanner(System.in);
         int codeEDT = myScanner.nextInt();
