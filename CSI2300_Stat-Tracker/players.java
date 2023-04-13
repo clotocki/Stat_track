@@ -87,7 +87,8 @@ public class players {
         else if (codeEDT == 10) {
             System.out.println("");
             System.out.println(">break");
-            System.out.println(" ");  
+            System.out.println(" ");
+            break;  
         }
         else {
             System.out.println(" ");

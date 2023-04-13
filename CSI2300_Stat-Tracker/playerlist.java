@@ -30,6 +30,7 @@ public class playerlist {
             int steals = Integer.parseInt(parts[6]);
             players newPlayer = new players(name, id, points, rebounds, assists, blocks, steals);
             addPlayer(newPlayer);
+            playID++;
         }
         reader.close();
     } catch (IOException e) {
@@ -39,7 +40,7 @@ public class playerlist {
     //function takes inputed player and adds them to array list, also printing it out to display
     static void addPlayer(players exPlayer) {
         pList.add(exPlayer);
-        System.out.println(pList.toString());
+        System.out.println(pList.get(exPlayer.playerID).toString());
         System.out.println(" ");
     }
      
