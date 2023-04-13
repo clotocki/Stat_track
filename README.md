@@ -17,3 +17,5 @@ Input corresponding number of these functions to perform it
 
 All created players and their user inputted stats will be stored in a text file for later use. 
 As long as this text file is stored computer, all player data is saved and can be updated and viewed later.
+
+Powerpoint presentation: https://docs.google.com/presentation/d/1znktLussKNPmGxmkZVDnOVwnMS3oeCeXbkK47kH5Glg/edit#slide=id.p
