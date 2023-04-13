@@ -24,14 +24,23 @@ public class players {
     @Override
     //converts data to string to be held in arraylist
     public String toString() {
-        return "Name: " + name + "\n Points: " + playerPTS + "\n Rebounds: " + playerRBD + "\n Assists: " + playerAST+ "\n Steals: " + playerSTL + "\n Blocks: " + playerBLK + "\n Player ID:" + playerID;
+        return "\nName: " + name + "\n Points: " + playerPTS + "\n Rebounds: " + playerRBD + "\n Assists: " + playerAST+ "\n Steals: " + playerSTL + "\n Blocks: " + playerBLK + "\n ID: " + playerID;
     }
     //function that allows users to edit that stats of players
     public static void statEdit(players inputPlayer) {
         boolean check2 = true;
         while (check2) {
         check2 = false;
-        System.out.println("Enter 1 to edit " + inputPlayer.name + "'s PTS, Enter 2 for RBDS, Enter 3 for AST, Enter 4 for STL, Enter 5 for BLK, Enter 10 to exit  ");
+        //System.out.println("Enter 1 to edit " + inputPlayer.name + "'s PTS, Enter 2 for RBDS, Enter 3 for AST, Enter 4 for STL, Enter 5 for BLK, Enter 10 to exit  ");
+        
+        System.out.println("Choose which stat to input:");
+        System.out.println("1. Points");
+        System.out.println("2. Rebounds");
+        System.out.println("3. Assists");
+        System.out.println("4. Steals");
+        System.out.println("5. Blocks");
+        System.out.println("10. Exit Stat Editor");
+        System.out.print("--> ");
         //program takes user input to figure out what stat the user wants to edit
         Scanner myScanner = new Scanner(System.in);
         int codeEDT = myScanner.nextInt();
@@ -41,17 +50,17 @@ public class players {
         if (codeEDT == 1) {
             System.out.println(" ");
             System.out.println(egs);
-            System.out.println(" ");
+            System.out.print("--> ");
             int gameStat = myScanner.nextInt();
             inputPlayer.playerPTS = inputPlayer.playerPTS + gameStat;
             System.out.println(" ");
-            System.out.println(st + inputPlayer.playerPTS + " pts");
+            System.out.println(st + inputPlayer.playerPTS + " points");
         //input of 2 allows users to edit rebounds
         }
         else if (codeEDT == 2) {
             System.out.println(" ");
             System.out.println(egs);
-            System.out.println(" ");
+            System.out.print("--> ");
             int gameStat = myScanner.nextInt();
             inputPlayer.playerRBD = inputPlayer.playerRBD + gameStat;
             System.out.println(" ");
@@ -60,7 +69,7 @@ public class players {
         else if (codeEDT == 3) {
             System.out.println(" ");
             System.out.println(egs);
-            System.out.println(" ");
+            System.out.print("--> ");
             int gameStat = myScanner.nextInt();
             inputPlayer.playerAST = inputPlayer.playerAST + gameStat;
             System.out.println(" ");
@@ -69,7 +78,7 @@ public class players {
         else if (codeEDT == 4) {
             System.out.println(" ");
             System.out.println(egs);
-            System.out.println(" ");
+            System.out.print("--> ");
             int gameStat = myScanner.nextInt();
             inputPlayer.playerSTL = inputPlayer.playerSTL + gameStat;
             System.out.println(" ");
@@ -78,7 +87,7 @@ public class players {
         else if (codeEDT == 5) {
             System.out.println(" ");
             System.out.println(egs);
-            System.out.println(" ");
+            System.out.print("--> ");
             int gameStat = myScanner.nextInt();
             inputPlayer.playerBLK = inputPlayer.playerBLK + gameStat;
             System.out.println(" ");
@@ -98,47 +107,4 @@ public class players {
         }
     }
 }
-/* public static void mergeSort(ArrayList arr) {
-        if (arr.size() < 2) {
-            return;
-        }
-        int mid = arr.size() / 2;
-        ArrayList<Integer> left = new ArrayList<Integer>();
-        ArrayList<Integer> right = new ArrayList<Integer>();
-        for (int i = 0; i < mid; i++) {
-            left.add(arr.get(i));
-        }
-        for (int i = mid; i < arr.size(); i++) {
-            right.add(arr.get(i));
-        }
-        mergeSort(left);
-        mergeSort(right);
-        merge(arr, left, right);
-    }
-
-    public static void merge(ArrayList<Integer> arr, ArrayList<Integer> left, ArrayList<Integer> right) {
-        int i = 0, j = 0, k = 0;
-        while (i < left.size() && j < right.size()) {
-            if (left.get(i) < right.get(j)) {
-                arr.set(k, left.get(i));
-                i++;
-            } else {
-                arr.set(k, right.get(j));
-                j++;
-            }
-            k++;
-        }
-        while (i < left.size()) {
-            arr.set(k, left.get(i));
-            i++;
-            k++;
-        }
-        while (j < right.size()) {
-            arr.set(k, right.get(j));
-            j++;
-            k++;
-        }
-    }
-}
-*/
 }
